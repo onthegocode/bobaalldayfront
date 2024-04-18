@@ -177,5 +177,22 @@ window.addEventListener("load", () => {
 
 	//Test Out some smart loading stuff like when in view or close or on move/change, load, etc... Basically loading only when needed, kinda like lazy load for code
 
+	//Check to see if Boba Making Section H2 text wrapped
+
+	const headingWrapped = () => {
+		const headContainer = document.querySelector(".bobaMakingContent");
+		const head = document
+			.querySelector(".bobaMakingHeading")
+			.querySelector("h2");
+		console.log(headContainer.clientWidth);
+		console.log(head.offsetWidth, head.clientWidth);
+		if (head.clientWidth > headContainer.clientWidth) {
+			head.style.cssText = "white-space: normal !important";
+
+			head.innerHTML = "<div>The Art Of Boba</div><br/><div>Making</div>";
+		}
+	};
+	headingWrapped();
+
 	//Animations
 });
