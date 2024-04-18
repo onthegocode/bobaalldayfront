@@ -589,6 +589,9 @@ a {
 	.navbarSection {
 		padding: 0 1rem;
 	}
+	.faqSection {
+		padding: 0 1rem;
+	}
 	.navMenu {
 		margin-left: -1rem;
 	}
@@ -597,6 +600,16 @@ a {
 @media only screen and (max-width: 480px) {
 	h1 {
 		font-size: 4rem;
+	}
+	ul li,
+	p,
+	a,
+	a:link,
+	a:visited,
+	.footerItem a:link,
+	.footerItem a:visited,
+	.btn {
+		font-size: 14px;
 	}
 }
 
