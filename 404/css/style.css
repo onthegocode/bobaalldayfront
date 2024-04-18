@@ -491,11 +491,25 @@ a {
 	.navbarSection {
 		padding: 0 1rem;
 	}
+	.errorSection {
+		padding: 0 1rem;
+	}
 	.navMenu {
 		margin-left: -1rem;
 	}
 }
-
+@media only screen and (max-width: 480px) {
+	ul li,
+	p,
+	a,
+	a:link,
+	a:visited,
+	.footerItem a:link,
+	.footerItem a:visited,
+	.btn {
+		font-size: 14px;
+	}
+}
 @media only screen and (max-width: 470px) {
 	.footerContent {
 		flex-direction: column;
