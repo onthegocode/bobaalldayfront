@@ -56,6 +56,16 @@ window.addEventListener("load", () => {
 			curvedElements.forEach((e) => {
 				e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
 			});
+
+			window
+				.matchMedia("(orientation: portrait)")
+				.addEventListener("change", (e) => {
+					if (!e.matches) {
+						curvedElements.forEach((e) => {
+							e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
+						});
+					}
+				});
 		}
 
 		window.addEventListener("resize", () => {
