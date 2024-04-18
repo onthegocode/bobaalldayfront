@@ -82,7 +82,10 @@ window.addEventListener("load", () => {
 		window
 			.matchMedia("(orientation: portrait)")
 			.addEventListener("change", (e) => {
-				if (!e.matches) {
+				if (e.matches) {
+					return;
+				} else {
+					alert("landscape");
 					resized = window.innerWidth;
 					curvedHeight = -curved.getBoundingClientRect().height.toFixed(2);
 					curvedBottom = curved.getBoundingClientRect().height.toFixed(2) * 2.5;
