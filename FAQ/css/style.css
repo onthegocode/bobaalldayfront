@@ -77,7 +77,7 @@ h2 span::after {
 
 h1 span::after {
 	bottom: -5px;
-	background: url("/media/FaqUnderline.svg") no-repeat center / contain;
+	background: url("/bobaalldayfront/media/FaqUnderline.svg") no-repeat center / contain;
 }
 
 h2 {
