@@ -42,17 +42,24 @@ window.addEventListener("load", () => {
 
 	// Curved Background Heights - ensures the total height of the curve is showing.
 	const curvedFunc = () => {
-		const curved = document.querySelector(".curved");
+		const curvedEl = document.querySelectorAll(".curved");
+		const curved = curvedEl[0];
 		let curvedHeight = -curved.getBoundingClientRect().height.toFixed(2);
 		let curvedBottom = (
 			curved.getBoundingClientRect().height.toFixed(2) * 2.5
 		).toFixed(2);
 
+		if (resized < 500) {
+			curvedEl.forEach((e) => {
+				e.style.cssText = `width: ${resized + 20}px;`;
+			});
+		}
+
 		window.addEventListener("resize", () => {
 			resized = window.innerWidth;
 			curvedHeight = -curved.getBoundingClientRect().height.toFixed(2);
 			curvedBottom = curved.getBoundingClientRect().height.toFixed(2) * 2.5;
-			console.log("curvedHeight");
+
 			document.documentElement.style.setProperty(
 				"--curved-height",
 				curvedHeight + "px"
