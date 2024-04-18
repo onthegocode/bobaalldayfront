@@ -48,10 +48,7 @@ window.addEventListener("load", () => {
 			curved.getBoundingClientRect().height.toFixed(2) * 2.5
 		).toFixed(2);
 
-		curved.style.cssText = `width: ${resized}px;`;
-
 		window.addEventListener("resize", () => {
-			curved.style.cssText = `width: ${resized}px;`;
 			resized = window.innerWidth;
 			curvedHeight = -curved.getBoundingClientRect().height.toFixed(2);
 			curvedBottom = curved.getBoundingClientRect().height.toFixed(2) * 2.5;
@@ -194,4 +191,24 @@ window.addEventListener("load", () => {
 	headingWrapped();
 
 	//Animations
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(
+			(entry) => {
+				if (
+					entry.isIntersecting &&
+					entry.target.classList.contains("hiddenContent")
+				) {
+					entry.target.classList.add("inView");
+					entry.target.parentElement.parentElement.classList.add("inView");
+				}
+			},
+			{
+				threshold: 0,
+			}
+		);
+	});
+
+	const aniEl = document.querySelectorAll(".hiddenContent");
+
+	aniEl.forEach((el) => observer.observe(el));
 });
