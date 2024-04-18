@@ -349,7 +349,9 @@ button,
 	font-weight: 900;
 	font-size: 1.6rem;
 }
-
+select {
+	-webkit-appearance: none;
+}
 .contactUsContainer input,
 .contactUsContainer select,
 .contactUsContainer textarea {
