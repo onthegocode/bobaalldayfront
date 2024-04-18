@@ -1299,7 +1299,7 @@ a {
 	}
 
 	/* Makes only 4 items show up */
-	.menuContent .itemCard:nth-child(n + 5) {
+	.menuContent .itemCard:nth-child(n + 4) {
 		display: none;
 	}
 
