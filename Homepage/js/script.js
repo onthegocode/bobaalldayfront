@@ -86,6 +86,9 @@ window.addEventListener("load", () => {
 					return;
 				} else {
 					alert("landscape");
+					curvedElements.forEach((e) => {
+						e.style.cssText = `width: ${resized + 50}px; left: -20px;`;
+					});
 					resized = window.innerWidth;
 					curvedHeight = -curved.getBoundingClientRect().height.toFixed(2);
 					curvedBottom = curved.getBoundingClientRect().height.toFixed(2) * 2.5;
