@@ -51,7 +51,7 @@ window.addEventListener("load", () => {
 
 		if (resized < 500) {
 			curvedEl.forEach((e) => {
-				e.style.cssText = `width: ${resized + 20}px;`;
+				e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
 			});
 		}
 
