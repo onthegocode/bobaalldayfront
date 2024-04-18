@@ -353,26 +353,26 @@ button,
 .contactUsContainer input,
 .contactUsContainer select,
 .contactUsContainer textarea {
-	border-radius: 1.5rem;
-	border: 2px solid rgba(0, 0, 0, 0.2);
-	padding: 1.6rem;
-	width: 100%;
-	font-family: var(--ff-body);
-	color: var(--clr-primary);
+	border-radius: 1.5rem !important;
+	border: 2px solid rgba(0, 0, 0, 0.2) !important;
+	padding: 1.6rem !important;
+	width: 100% !important;
+	font-family: var(--ff-body) !important;
+	color: var(--clr-primary) !important;
 }
 
 .contactUsContainer input:focus-visible,
 .contactUsContainer select:focus-visible,
 .contactUsContainer textarea:focus-visible {
-	outline: none;
+	outline: none !important;
 }
 
 #subject,
 ::placeholder {
-	font-size: 1.4rem;
-	font-family: var(--ff-body);
-	color: rgba(0, 0, 0, 0.4);
-	transition: var(--hover-transition);
+	font-size: 1.4rem !important;
+	font-family: var(--ff-body) !important;
+	color: rgba(0, 0, 0, 0.4) !important;
+	transition: var(--hover-transition) !important;
 }
 
 .contactUsContent {
