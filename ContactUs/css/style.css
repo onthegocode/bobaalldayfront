@@ -350,9 +350,9 @@ button,
 	font-size: 1.6rem;
 }
 .contactUsContainer select {
-    -moz-appearance: none; 
-    -webkit-appearance: none; 
-    appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
 }
 .contactUsContainer input,
 .contactUsContainer select,
@@ -724,6 +724,16 @@ button,
 	}
 	.contactUs {
 		gap: 2rem;
+	}
+	ul li,
+	p,
+	a,
+	a:link,
+	a:visited,
+	.footerItem a:link,
+	.footerItem a:visited,
+	.btn {
+		font-size: 14px;
 	}
 }
 
