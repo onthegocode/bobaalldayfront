@@ -83,7 +83,10 @@ window.addEventListener("load", () => {
 			.matchMedia("(orientation: portrait)")
 			.addEventListener("change", (e) => {
 				if (e.matches) {
-					return;
+					resized = window.innerWidth;
+					curvedElements.forEach((e) => {
+						e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
+					});
 				} else {
 					alert("landscape");
 					curvedElements.forEach((e) => {
