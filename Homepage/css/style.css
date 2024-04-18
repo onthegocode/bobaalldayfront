@@ -1475,6 +1475,10 @@ a {
 }
 
 @media only screen and (max-width: 480px) {
+	.curved,
+	.curved-w {
+		width: 120%;
+	}
 	h1 {
 		font-size: 4rem;
 	}
