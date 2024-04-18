@@ -77,7 +77,7 @@ h2 span::after {
 
 h1 span::after {
 	bottom: -5px;
-	background: url("/media/happinessUnderline.svg") no-repeat center / cover;
+	background: url("/bobaalldayfront/media/happinessUnderline.svg") no-repeat center / cover;
 }
 
 h2 {
@@ -386,7 +386,7 @@ a {
 
 .popularHeading h2 span::after {
 	bottom: -14px;
-	background: url("/media/popularUnderline.svg") no-repeat center / cover;
+	background: url("/bobaalldayfront/media/popularUnderline.svg") no-repeat center / cover;
 }
 
 .popularHeading h2 {
@@ -461,7 +461,7 @@ a {
 	height: 21px;
 	bottom: -12px;
 	margin-bottom: 1rem;
-	background: url("/media/aboutUsUnderline.svg") no-repeat center/contain;
+	background: url("/bobaalldayfront/media/aboutUsUnderline.svg") no-repeat center/contain;
 }
 
 /* #endregion About Us Section End */
@@ -489,7 +489,7 @@ a {
 .menuHeading h2 span::after {
 	bottom: -12px;
 	height: 21px;
-	background: url("/media/menuUnderline.svg") no-repeat center/contain;
+	background: url("/bobaalldayfront/media/menuUnderline.svg") no-repeat center/contain;
 }
 
 .menuContent {
@@ -583,7 +583,7 @@ a {
 .bobaMakingHeading h2 span::after {
 	bottom: -12px;
 	height: 21px;
-	background: url("/media/artofbobaUnderline.svg") no-repeat center/contain;
+	background: url("/bobaalldayfront/media/artofbobaUnderline.svg") no-repeat center/contain;
 }
 
 .bobaMakingImg img {
@@ -618,10 +618,10 @@ a {
 	height: 21px;
 }
 .bobaMakingHeading h2 div:first-child::after {
-	background: url("/media/ArtofbobaUnderline-top.svg") no-repeat center/contain;
+	background: url("/bobaalldayfront/media/ArtofbobaUnderline-top.svg") no-repeat center/contain;
 }
 .bobaMakingHeading h2 div:last-child::after {
-	background: url("/media/ArtofbobaUnderline-bottom.svg") no-repeat
+	background: url("/bobaalldayfront/media/ArtofbobaUnderline-bottom.svg") no-repeat
 		center/contain;
 }
 
@@ -652,7 +652,7 @@ a {
 .galleryHeading h2 span::after {
 	bottom: -12px;
 	height: 21px;
-	background: url("/media/galleryUnderline.svg") no-repeat center/contain;
+	background: url("/bobaalldayfront/media/galleryUnderline.svg") no-repeat center/contain;
 }
 
 .galleryContent {
@@ -705,7 +705,7 @@ a {
 .reviewsHeading h2 span::after {
 	bottom: -12px;
 	height: 21px;
-	background: url("/media/reviewUnderline.svg") no-repeat center/contain;
+	background: url("/bobaalldayfront/media/reviewUnderline.svg") no-repeat center/contain;
 }
 
 .reviewsContent {
