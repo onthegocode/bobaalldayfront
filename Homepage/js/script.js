@@ -71,6 +71,12 @@ window.addEventListener("load", () => {
 				"--curved-bottom",
 				curvedBottom + "px"
 			);
+
+			if (resized < 500) {
+				curvedElements.forEach((e) => {
+					e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
+				});
+			}
 		});
 		document.documentElement.style.setProperty(
 			"--curved-height",
