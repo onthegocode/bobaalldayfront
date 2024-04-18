@@ -90,7 +90,6 @@ window.addEventListener("load", () => {
 			},
 			720: {
 				perView: 1,
-				gap: 0,
 			},
 		},
 	};
@@ -184,8 +183,6 @@ window.addEventListener("load", () => {
 		const head = document
 			.querySelector(".bobaMakingHeading")
 			.querySelector("h2");
-		console.log(headContainer.clientWidth);
-		console.log(head.offsetWidth, head.clientWidth);
 		if (head.clientWidth > headContainer.clientWidth) {
 			head.style.cssText = "white-space: normal !important";
 
