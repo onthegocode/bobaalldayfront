@@ -79,40 +79,6 @@ window.addEventListener("load", () => {
 			}
 		});
 
-		window
-			.matchMedia("(orientation: portrait)")
-			.addEventListener("change", (e) => {
-				if (e.matches) {
-					resized = window.innerWidth;
-					curvedElements.forEach((e) => {
-						e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
-					});
-				} else {
-					alert("landscape");
-					curvedElements.forEach((e) => {
-						e.style.cssText = `width: ${resized + 50}px; left: -20px;`;
-					});
-					resized = window.innerWidth;
-					curvedHeight = -curved.getBoundingClientRect().height.toFixed(2);
-					curvedBottom = curved.getBoundingClientRect().height.toFixed(2) * 2.5;
-
-					document.documentElement.style.setProperty(
-						"--curved-height",
-						curvedHeight + "px"
-					);
-					document.documentElement.style.setProperty(
-						"--curved-bottom",
-						curvedBottom + "px"
-					);
-
-					if (resized < 500) {
-						curvedElements.forEach((e) => {
-							e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
-						});
-					}
-				}
-			});
-
 		document.documentElement.style.setProperty(
 			"--curved-height",
 			curvedHeight + "px"
