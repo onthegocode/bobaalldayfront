@@ -1530,15 +1530,3 @@ a {
 	}
 }
 /*#endregion Media Query End */
-
-/* This is just for dealing with browser issue get rid of once done */
-.circle-1,
-.circle-1-top,
-.circle-2,
-.circle-2-top,
-.circleMini-1,
-.circleMini-2,
-.circleMini-1-top,
-.circleMini-2-top {
-	display: none !important;
-}
