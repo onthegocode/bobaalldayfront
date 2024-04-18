@@ -36,6 +36,10 @@ body {
 	color: var(--clr-primary);
 }
 
+main {
+	overflow: hidden;
+}
+
 p {
 	font-size: 1.6rem;
 	line-height: 150%;
