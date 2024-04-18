@@ -1574,3 +1574,6 @@ a {
 .footerSection {
 	padding: 0 !important;
 }
+.curved {
+	width: 500px !important;
+}
