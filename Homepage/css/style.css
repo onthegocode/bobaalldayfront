@@ -34,6 +34,10 @@ body {
 	font-family: var(--ff-body);
 	font-size: inherit;
 	color: var(--clr-primary);
+
+		margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
 }
 
 main {
@@ -1570,10 +1574,3 @@ a {
 	}
 }
 /*#endregion Media Query End */
-
-.footerSection {
-	padding: 0 !important;
-}
-.curved {
-	width: 500px !important;
-}
