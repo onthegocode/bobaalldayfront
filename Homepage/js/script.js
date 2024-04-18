@@ -47,8 +47,11 @@ window.addEventListener("load", () => {
 		let curvedBottom = (
 			curved.getBoundingClientRect().height.toFixed(2) * 2.5
 		).toFixed(2);
-		console.log(curvedBottom);
+
+		curved.style.cssText = `width: ${resized}px;`;
+
 		window.addEventListener("resize", () => {
+			curved.style.cssText = `width: ${resized}px;`;
 			resized = window.innerWidth;
 			curvedHeight = -curved.getBoundingClientRect().height.toFixed(2);
 			curvedBottom = curved.getBoundingClientRect().height.toFixed(2) * 2.5;
@@ -62,7 +65,6 @@ window.addEventListener("load", () => {
 				curvedBottom + "px"
 			);
 		});
-
 		document.documentElement.style.setProperty(
 			"--curved-height",
 			curvedHeight + "px"
