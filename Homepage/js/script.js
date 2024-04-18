@@ -56,16 +56,6 @@ window.addEventListener("load", () => {
 			curvedElements.forEach((e) => {
 				e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
 			});
-
-			window
-				.matchMedia("(orientation: portrait)")
-				.addEventListener("change", (e) => {
-					if (!e.matches) {
-						curvedElements.forEach((e) => {
-							e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
-						});
-					}
-				});
 		}
 
 		window.addEventListener("resize", () => {
@@ -88,6 +78,32 @@ window.addEventListener("load", () => {
 				});
 			}
 		});
+
+		window
+			.matchMedia("(orientation: portrait)")
+			.addEventListener("change", (e) => {
+				if (!e.matches) {
+					resized = window.innerWidth;
+					curvedHeight = -curved.getBoundingClientRect().height.toFixed(2);
+					curvedBottom = curved.getBoundingClientRect().height.toFixed(2) * 2.5;
+
+					document.documentElement.style.setProperty(
+						"--curved-height",
+						curvedHeight + "px"
+					);
+					document.documentElement.style.setProperty(
+						"--curved-bottom",
+						curvedBottom + "px"
+					);
+
+					if (resized < 500) {
+						curvedElements.forEach((e) => {
+							e.style.cssText = `width: ${resized + 20}px; left: -10px;`;
+						});
+					}
+				}
+			});
+
 		document.documentElement.style.setProperty(
 			"--curved-height",
 			curvedHeight + "px"
