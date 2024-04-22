@@ -1,0 +1,268 @@
+:root {
+	--clr-bg: #fff9ef;
+	--clr-primary: #212427;
+	--clr-secondary: #ffffff;
+	--clr-accent: #ed1277;
+	--ff-title: "Baloo 2", sans-serif;
+	--ff-body: "Lato", sans-serif;
+	--hover-transition: all 0.4s ease;
+	--max-screen: 1280px; /*Test 1280px might be good*/
+
+	--curved-height: -50px;
+	--curved-bottom: 120px;
+}
+/*#endregion Variables End */
+
+/*#region Default Settings Start*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%; /*1rem = 10px*/
+}
+
+body {
+	/*Temporary get rid of it*/
+	overflow-x: hidden;
+	font-family: var(--ff-body);
+	font-size: inherit;
+	color: var(--clr-primary);
+}
+
+main {
+	overflow: hidden;
+}
+
+p {
+	font-size: 1.6rem;
+	line-height: 150%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-title);
+	font-weight: 900;
+}
+
+h1 {
+	font-size: 6.4rem;
+	line-height: 120%;
+}
+h1 span,
+h2 span {
+	position: relative;
+}
+
+h1 span::after,
+h2 span::after {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 35px;
+}
+
+h1 span::after {
+	bottom: -5px;
+	background: url("/media/comingsoonunderline.svg") no-repeat center / contain;
+}
+
+h2 {
+	font-size: 4.8rem;
+}
+
+h4 {
+	font-size: 2.4rem;
+}
+
+h5 {
+	font-family: var(--ff-body);
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+/*#endregion Default Settings End */
+
+/*#region Utility Start */
+.container {
+	max-width: var(--max-screen);
+	margin: 0 auto;
+	position: relative;
+}
+h1 {
+	font-size: 10rem;
+}
+.c-Content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	height: var(--page-height);
+	width: 100%;
+}
+
+.c-textContent {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3rem;
+}
+
+.logo img {
+	width: 200px;
+}
+a {
+	text-decoration: none;
+}
+
+.btn:link,
+.btn:visited,
+.btn-outline:link,
+.btn-outline:visited {
+	display: flex;
+	width: fit-content;
+	font-family: var(--ff-title);
+	font-size: 1.6rem;
+	font-weight: 900;
+	padding: 1.6rem 4.1rem;
+	border: 2px solid var(--clr-accent);
+	border-radius: 1000px;
+	text-align: center;
+	transition: var(--hover-transition);
+}
+
+.btn:link,
+.btn:visited {
+	background-color: #ed1277;
+	color: var(--clr-secondary);
+}
+.btn:hover,
+.btn:active {
+	background-color: transparent;
+	color: var(--clr-accent);
+}
+
+.circle-1,
+.circle-2 {
+	position: absolute;
+	bottom: 350px;
+	left: 0px;
+	transform: translate(-50%, 50%);
+	z-index: -1;
+}
+
+.circle-1,
+.circle-1-top {
+	max-width: 525px;
+	z-index: -2;
+}
+.circleMini-1,
+.circleMini-2,
+.circleMini-1-top,
+.circleMini-2-top {
+	position: absolute;
+	z-index: -4;
+}
+
+.circleMini-1 {
+	bottom: 120px;
+	left: 230px;
+}
+
+.circleMini-2 {
+	bottom: 110px;
+	left: 310px;
+}
+
+.circle-1-top,
+.circle-2-top {
+	position: absolute;
+	top: 330px;
+	right: 0px;
+	transform: translate(50%, -50%);
+	z-index: -1;
+}
+.circleMini-1-top {
+	top: 110px;
+	right: 230px;
+}
+.circleMini-2-top {
+	top: 100px;
+	right: 310px;
+}
+section {
+	padding: 0 2rem;
+}
+@media only screen and (max-width: 1160px) {
+	h1 {
+		font-size: 8rem;
+		text-align: center;
+	}
+	p {
+		max-width: 600px;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 6rem;
+	}
+	p {
+		font-size: 14px;
+		max-width: 400px;
+		text-align: center;
+	}
+	.btn:link,
+	.btn:visited {
+		font-size: 14px;
+	}
+	h1 span::after {
+		bottom: -12px;
+	}
+	.c-Content {
+		gap: 1rem;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	section {
+		padding: 0 1rem;
+	}
+	h1 {
+		font-size: 5rem;
+	}
+	.logo img {
+		max-width: 150px;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	h1 {
+		font-size: 4.2rem;
+	}
+	.c-textContent {
+		margin-top: 1rem;
+		gap: 2rem;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	h1 {
+		font-size: 4rem;
+	}
+}
