@@ -76,7 +76,7 @@ h2 span::after {
 
 h1 span::after {
 	bottom: -5px;
-	background: url("/media/comingsoonunderline.svg") no-repeat center / contain;
+	background: url("/bobaalldayfront/media/comingsoonunderline.svg") no-repeat center / contain;
 }
 
 h2 {
